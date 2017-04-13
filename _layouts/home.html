@@ -1,0 +1,32 @@
+{% include header.html %}
+
+<body>
+
+{% include main-nav.html %}
+
+ <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+
+<div class="section about">
+    <div class="container">
+    
+        {% for section in site.about %}
+
+        <div class="row">
+
+            <div class="four columns">
+            </div>
+    
+            <div class="eight columns service-desc">
+                <h3 class="heading">{{section.title}}</h3>
+                <p>{{section.content}}</p>
+            </div>
+
+        </div>
+
+        {% endfor %}
+    </div>
+</div>
+       
+{% include footer.html %}
