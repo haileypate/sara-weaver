@@ -1,0 +1,69 @@
+{% include header.html %}
+
+<body>
+
+{% include main-nav.html %}
+
+ <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+
+<div class="container">
+
+    <div class="section row">
+
+        <div class="four columns"></div>
+        <div class="eight columns">
+            <h2>Education</h2>
+            <p>{{ site.about[1].content}}</p>
+        </div>
+
+    </div>
+        
+    <div class="section row">
+
+        <div class="four columns"></div>
+        <div class="eight columns">
+            <h2>Teaching</h2>
+            <p>{{ site.about[4].content}}</p>
+        </div>
+
+    </div>
+
+    <div class="section row">
+
+        <div class="four columns"></div>
+        <div class="eight columns">
+            <h2>Mentorship</h2>
+            <p>{{ site.about[2].content}}</p>
+        </div>
+
+    </div>
+
+
+    <div class="section row">
+
+        <div class="four columns"></div>
+        <div class="eight columns">
+            <h2>Professional Experience</h2>
+            <p>{{ site.about[3].content}}</p>
+        </div>
+
+    </div>
+
+
+    <div class="section row">
+
+        <div class="four columns"></div>
+        <div class="eight columns">
+            <h2>Awards</h2>
+            <p>{{ site.about[0].content}}</p>
+        </div>
+
+    </div>
+
+</div>
+
+
+       
+{% include footer.html %}

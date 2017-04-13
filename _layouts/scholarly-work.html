@@ -1,0 +1,85 @@
+{% include header.html %}
+
+<body>
+
+{% include main-nav.html %}
+
+ <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+
+<div class="section">
+    <div class="container">
+
+        <h2>Publications</h2>
+        <h5>Published</h5>
+
+        {% for item in site.data.publications %}
+        <div class="row">
+
+            <div class="four columns">
+            </div>
+    
+            <div class="eight columns">
+                <p class="indent">{{item.author-list | markdownify | remove: '<p>' | remove: '</p>'}}. {{item.year}}. {{item.title | markdownify | remove: '<p>' | remove: '</p>' }}. {{item.publication | markdownify | remove: '<p>' | remove: '</p>' }}. {{item.vol-info | markdownify | remove: '<p>' | remove: '</p>' }}.</p>
+            </div>
+
+        </div>
+        {% endfor %}
+
+        <h5>In Prep</h5>
+
+        {% for item in site.data.publications-in-prep %}
+        <div class="row">
+
+            <div class="four columns">
+            </div>
+    
+            <div class="eight columns">
+                <p class="indent">{{item.author-list | markdownify | remove: '<p>' | remove: '</p>'}}. {{item.year}}. {{item.title | markdownify | remove: '<p>' | remove: '</p>' }}. {{item.publication | markdownify | remove: '<p>' | remove: '</p>' }}. {{item.vol-info | markdownify | remove: '<p>' | remove: '</p>' }}.</p>
+            </div>
+
+        </div>
+        {% endfor %}
+
+    </div>
+</div>
+
+<div class="section">
+    <div class="container">
+
+        <h2>Presentations</h2>
+        <h5>Invited</h5>
+
+        {% for item in site.data.presentations-invited %}
+        <div class="row">
+
+            <div class="four columns">
+            </div>
+    
+            <div class="eight columns">
+                <p class="indent">{{item.presentation | markdownify | remove: '<p>' | remove: '</p>'}}.</p>
+            </div>
+
+        </div>
+        {% endfor %}
+
+        <h5>Research</h5>
+
+        {% for item in site.data.presentations-research %}
+        <div class="row">
+
+            <div class="four columns">
+            </div>
+    
+            <div class="eight columns">
+                <p class="indent">{{item.presentation | markdownify | remove: '<p>' | remove: '</p>'}}.</p>
+            </div>
+
+        </div>
+        {% endfor %}
+        
+    </div>
+</div>
+       
+{% include footer.html %}
